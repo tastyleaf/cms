@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180313094525) do
+ActiveRecord::Schema.define(version: 20180313094749) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20180313094525) do
     t.string "content"
     t.string "template_id"
     t.string "spreadsheet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spreadsheets", force: :cascade do |t|
+    t.string "name"
+    t.string "range_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
