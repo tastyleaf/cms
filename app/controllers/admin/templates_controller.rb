@@ -1,2 +1,2 @@
-class Admin::TemplatesController < ApplicationController
+class Admin::TemplatesController < Admin::BaseController
 end
