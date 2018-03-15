@@ -6,16 +6,15 @@
           <div class="container h-100">
             <div class="hero-copy-wrapper">
               <div class="hero-copy-inner-wrapper">
-                <!--在這裡-->
-                <% @data1.each do |data| %>
-                  <h1 class="hero-copy-title"><%= data[0] %></h1>
-                <% end %> <!--在這裡-->
+                <!--在這裡-->               
+                  <h1 class="hero-copy-title"><%= @data2[0][1] %></h1>
+                 <!--在這裡-->
 
                 <div class="hero-copy-description"></div>
                 
-                <!--在這裡--><%= @data2.each do |data| %>
-                  <a class="hero-action-link promotion-btn promotion-primary-btn" href="https://promotion.gogoro.com/tw/gogoro-2-far-eastone/"><%= data[0] %></a>
-                <% end %><!--在這裡-->
+                <!--在這裡-->
+                  <a class="hero-action-link promotion-btn promotion-primary-btn" href="https://promotion.gogoro.com/tw/gogoro-2-far-eastone/"><%= @data2[0][2] %></a>
+                <!--在這裡-->
 
               </div>
             </div>
@@ -37,7 +36,7 @@
         <ul class="navigation-list">
 
           <!--在這裡-->
-            <%= @data3.each do |data| %>
+            <% @data3.each do |data| %>
               <li class="navigation-item navigation-item--active">
                 <label class="navigation-toggle-trigger" for="navigation-toggle">
                   <a class="navigation-link" href="/tw/">
@@ -67,8 +66,8 @@
               <div class="col-lg-6 col-xl-7 col-md-6 promotion-item-content-column">
                 <div class="promotion-item-content">
                   <div>
-                    <h2 class="promotion-item-name">遠傳超級騎機專案</h2>
-                    <div class="promotion-item-description"><div><%= data[0] %></div></div>
+                    <h2 class="promotion-item-name"><%= data[0] %></h2>
+                    <div class="promotion-item-description"><div><%= data[1] %></div></div>
                   </div>
                 </div>
               </div>
@@ -78,12 +77,13 @@
 
       <div class="text-center">
 
-        <!--在這裡--><%= @data5.each do |data| %>
-          <a class="promotion-btn promotion-primary-btn" href="http://promotion.gogoro.com/tw/archive"><%= data[0] %></a>
-        <% end %><!--在這裡-->
+        <!--在這裡-->
+          <a class="promotion-btn promotion-primary-btn" href="http://promotion.gogoro.com/tw/archive"><%= @data5[0][0] %></a>
+        <!--在這裡-->
 
       </div>
     </div>
   </div>
 </main>
+ 
  

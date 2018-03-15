@@ -14,7 +14,7 @@ class PagesController < ApplicationController
     @data3 = response3.values
     response4 = service.get_spreadsheet_values("1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o", "item!B2:D9")
     @data4 = response4.values
-    response5 = service.get_spreadsheet_values("1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o", "nav-bottom!B1:G8" )
+    response5 = service.get_spreadsheet_values("1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o", "item!D2" )
     @data5 = response5.values
 
   end
