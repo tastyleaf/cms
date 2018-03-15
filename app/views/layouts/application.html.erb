@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cms</title>
+    <meta name="description" content="Gogoro 智慧雙輪購車優惠最新資訊！">
+    <meta name="google-site-verification" content="sKxuWAkitwdgBRs9t3aDqL_gulJD80AW4st4Y1uVGfE" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gogoro - 本月購車優惠總整理">
+    <meta property="og:description" content="Gogoro 智慧雙輪購車優惠最新資訊！">
+    <meta property="og:image" content="http://promotion.gogoro.com/images/og/creditcard-linkpost.png">
+    <meta property="og:url" content="http://promotion.gogoro.com/tw">
+    <link rel="canonical" href="http://promotion.gogoro.com/tw">
+
+    <link rel="stylesheet" media="screen" href="/assets/frontend/main-08bb4c87ec09be0081734edeb37027a20fc1cfb37db0ec2897d198833ae192bd.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +24,30 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NCBSL8"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NCBSL8');</script>
+    <!-- End Google Tag Manager -->
+
+    <ggr-nav lang="tc" theme="light" :scrolling-opacity="false" :url-prefix="true"></ggr-nav>
+
     <%= yield %>
+
+    <ggr-directory lang="tc" :subscribe-form="true" :url-prefix="true"></ggr-directory>
+    <ggr-footer lang="tc" :url-prefix="true"></ggr-footer>
+
+    <script src="https://cdn.gogoro.com/libs/ggr-components/latest/ggr-components.min.js"></script>
+    <script src="/assets/frontend/main-d224ffd7b753bf4ee95c1f525ac5d78f0c18e098386a2f812fc92d6a3a1257c0.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    
+  <script>
+    new HeroCarousel($('.hero-list'))
+  </script>
+  
   </body>
 </html>
