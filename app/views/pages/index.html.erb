@@ -6,15 +6,15 @@
           <div class="container h-100">
             <div class="hero-copy-wrapper">
               <div class="hero-copy-inner-wrapper">
-
-                <!--在這裡--><% if false %>
-                  <h1 class="hero-copy-title"><%= 變數 %></h1>
-                <% end %><!--在這裡-->
+                <!--在這裡-->
+                <% @data1.each do |data| %>
+                  <h1 class="hero-copy-title"><%= data[0] %></h1>
+                <% end %> <!--在這裡-->
 
                 <div class="hero-copy-description"></div>
-
-                <!--在這裡--><% if false %>
-                  <a class="hero-action-link promotion-btn promotion-primary-btn" href="https://promotion.gogoro.com/tw/gogoro-2-far-eastone/"><%= 變數 %></a>
+                
+                <!--在這裡--><%= @data2.each do |data| %>
+                  <a class="hero-action-link promotion-btn promotion-primary-btn" href="https://promotion.gogoro.com/tw/gogoro-2-far-eastone/"><%= data[0] %></a>
                 <% end %><!--在這裡-->
 
               </div>
@@ -36,17 +36,17 @@
       <div class="container navigation-container">
         <ul class="navigation-list">
 
-          <!--在這裡--><% if false %>
-            <% 陣列.each do |變數| %>
+          <!--在這裡-->
+            <%= @data3.each do |data| %>
               <li class="navigation-item navigation-item--active">
                 <label class="navigation-toggle-trigger" for="navigation-toggle">
                   <a class="navigation-link" href="/tw/">
-                    <span class="navigation-link-text">變數</span>
+                    <span class="navigation-link-text"><%= data[0] %></span>
                   </a>
                 </label>
               </li>
             <% end %>
-          <% end %><!--在這裡-->
+          <!--在這裡-->
 
           <li class="navigation-modal-bg"></li>
         </ul>
@@ -58,8 +58,8 @@
   <div class="container">
     <div class="promotion-list">
 
-      <!--在這裡--><% if false %>
-          <% 陣列.each do |變數| %>
+      <!--在這裡--> 
+          <% @data4.each do |data| %>
             <a class="promotion-item-link row" href="/tw/gogoro-2-far-eastone">
               <div class="col-lg-6 col-xl-5 col-md-6 promotion-item-cover-photo-column">
                 <div class="promotion-item-cover-photo" style="background-image: url(/uploads/promotions/11-cover-photo-62f3a13e91b84c3f51324584d6efccf5c0d5a550.png?1518155967)"></div>
@@ -68,22 +68,22 @@
                 <div class="promotion-item-content">
                   <div>
                     <h2 class="promotion-item-name">遠傳超級騎機專案</h2>
-                    <div class="promotion-item-description"><div>變數</div></div>
+                    <div class="promotion-item-description"><div><%= data[0] %></div></div>
                   </div>
                 </div>
               </div>
             </a>
           <% end %>
-        <% end %><!--在這裡-->
+        <!--在這裡-->
 
       <div class="text-center">
 
-        <!--在這裡--><% if false %>
-          <a class="promotion-btn promotion-primary-btn" href="http://promotion.gogoro.com/tw/archive">變數</a>
+        <!--在這裡--><%= @data5.each do |data| %>
+          <a class="promotion-btn promotion-primary-btn" href="http://promotion.gogoro.com/tw/archive"><%= data[0] %></a>
         <% end %><!--在這裡-->
 
       </div>
     </div>
   </div>
 </main>
-<%=  @response.to_json %>
+ 
