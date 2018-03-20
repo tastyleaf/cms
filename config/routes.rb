@@ -4,14 +4,21 @@ Rails.application.routes.draw do
 
 
   resources :pages
+  resources :templates
+  resources :categories, only: [:index, :post, :delete]
+  resources :spreadsheets, only: [:new, :create, :update] do
+    member do
+      get :tabs
+      get :range
+      get :js
+    end
+  end    
   root "pages#index" 
 
 
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
-    resources :templates 
-    resources :categories
     root "users#index"
   end  
 
