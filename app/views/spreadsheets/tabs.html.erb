@@ -1,0 +1,17 @@
+<div>>--------</div>
+<div>>--------</div>
+<div>>--------</div>
+<div>--------</div>
+<%= @spreadsheet.spreadsheet_name %>
+
+<div>--------</div>
+<% @tabs.each do |tab| %>
+  <div>
+    <%= link_to "#{tab.properties.title}", method: :post, spreadsheet_path(:id) %>
+    <iframe  src="#"></iframe>
+  </div>
+<% end %>
+
+<div>--------</div>
+<div>--------</div>
+<div>--------</div>
