@@ -31,8 +31,13 @@ class SpreadsheetsController < ApplicationController
     
   end
 
+  def range
 
+  end
 
+  def js
+
+  end
   private
 
   def set_spreadsheet
@@ -43,8 +48,6 @@ class SpreadsheetsController < ApplicationController
   def spreadsheet_params
     params.require(:spreadsheet).permit(:spreadsheet_name, :tabs_name, :range_name)
   end
-
-
 
 
 end
