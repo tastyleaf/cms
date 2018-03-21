@@ -33,7 +33,7 @@ class SpreadsheetsController < ApplicationController
   end
 
   def range
-
+    set_spreadsheet
   end
 
   def js
