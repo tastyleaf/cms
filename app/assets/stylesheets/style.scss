@@ -146,13 +146,13 @@ input#navigation-toggle {
   text-align: center;
 }
 
-.type-id > .form-group{
+.type-id > form > .form-group{
   margin: 0;
   display: inline-block;
   width: 30%;
 }
 
-.type-id > form > .form-group > input{
+.type-id > form > .form-group input{
   width:100%;
   padding: 3.5%;
   font-size: 30px;
