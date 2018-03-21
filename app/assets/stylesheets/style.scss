@@ -148,22 +148,39 @@ input#navigation-toggle {
 
 .form-group{
   margin: 0;
+  display: inline-block;
+  width: 30%;
 }
 
-.form-group > input:first-child{
-  width: 30%;
-  padding: 1%;
+.form-group input{
+  width:100%;
+  padding: 3.5%;
   font-size: 30px;
   outline: none;
   border-radius: 30px 0 0 30px;
   border-color: #000;
 }
 
-.form-group > input:nth-child(2){
+::placeholder{
+  color: #adadad;
+}
+
+form > input{
   width: 15%;
   padding: 1%;
   font-size: 30px;
   border-radius: 0 30px 30px 0;
   border: 2px solid #000;
+  display: inline-block;
 }
  
+.after-rendering{
+  width: 40%;
+  display: inline-block;
+  text-align: left;
+}
+
+.after-rendering li{
+  font-size: 25px;
+  color: #6c6c6c;
+}
