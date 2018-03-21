@@ -25,7 +25,35 @@
 
   <body>
     <% if current_user %>
-      
+      <nav class="navbar navbar-default cms">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            
+            <a class="navbar-brand" href="/spreadsheets/new">CMS</a>
+          </div>
+        </nav>
+    <% end %>
+    <div class="nav navbar-nav navbar-right user">
+      <% if current_user %>
+        <%= link_to 'Hi', class: "my-name" %>
+        <%= link_to('登出', destroy_user_session_path, method: :delete) %> |
+        <%= link_to('修改密碼', edit_user_registration_path) %>
+      <% else %>
+        <%= link_to('註冊', new_user_registration_path) %> |
+        <%= link_to('登入', new_user_session_path) %>
+      <% end %>
+    </div>
+    <% if notice %>
+      <div class="alert remind fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p><%= notice %></p>
+      </div>
+    <% elsif alert %>
+      <div class="alert remind fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <p><%= alert %></p>
+      </div>
     <% end %>
 
     <%= yield %>

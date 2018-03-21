@@ -8,7 +8,7 @@ body {
 }
 
 
-a, a:hover {
+a, a:hover, a:focus {
   text-decoration: none;
   color: #323237;
 }
@@ -226,3 +226,34 @@ iframe{
 .choice:hover iframe{
   border: none;
  }
+
+.user{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 15px;
+  z-index: 100;
+  padding: 15px;
+  margin: 0;
+}
+
+.remind{
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: block;
+  top: 15px;
+  right: 0;
+  left: 0;
+  width: 35%;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  z-index: 100;
+}
+
+div.alert{
+  color: #fff;
+  font-weight: 900;
+}
