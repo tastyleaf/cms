@@ -146,13 +146,13 @@ input#navigation-toggle {
   text-align: center;
 }
 
-.form-group{
+.type-id > .form-group{
   margin: 0;
   display: inline-block;
   width: 30%;
 }
 
-.form-group input{
+.type-id > form > .form-group > input{
   width:100%;
   padding: 3.5%;
   font-size: 30px;
@@ -165,7 +165,7 @@ input#navigation-toggle {
   color: #adadad;
 }
 
-form > input{
+.type-id > form > input{
   width: 15%;
   padding: 1%;
   font-size: 30px;
@@ -256,4 +256,11 @@ iframe{
 div.alert{
   color: #fff;
   font-weight: 900;
+}
+
+.login {
+  width: 30%;
+  position: absolute;
+  right: 100px;
+  top: 150px;
 }
