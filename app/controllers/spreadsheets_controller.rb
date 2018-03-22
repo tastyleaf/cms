@@ -29,8 +29,10 @@ class SpreadsheetsController < ApplicationController
   end
 
   def update
-    @spreadsheet = Spreadsheet.update(spreadsheet_params)
-    redirect_to range_spreadsheet(@spreadsheet)
+    set_spreadsheet
+    if @spreadsheet.update_attributes(spreadsheet_params)
+      redirect_to range_spreadsheet_path(@spreadsheet)
+    end
   end
 
   def range
@@ -48,7 +50,7 @@ class SpreadsheetsController < ApplicationController
   end
 
   def spreadsheet_params
-    params.require(:spreadsheet).permit(:spreadsheet_name, :tabs_name, :range_name)
+    params.require(:spreadsheet).permit(:spreadsheet_name, :tab_name, :tab_id, :range_a, :range_b)
   end
 
 
