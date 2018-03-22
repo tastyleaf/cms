@@ -45,8 +45,33 @@ class SpreadsheetsController < ApplicationController
   end
 
   def js
+    @spreadsheet = Spreadsheet.find(params[:id])  
+    require 'google/apis/sheets_v4'
+    service = Google::Apis::SheetsV4::SheetsService.new
+    service.key = 'AIzaSyCw1eTY-S9Xuxqv4AZ_bfHDlxEJ3KsLuig'
+    service.authorization = nil
+    response = service.get_spreadsheet_values(@spreadsheet.spreadsheet_name, "#{@spreadsheet.tab_name}!#{@spreadsheet.range_name}")
+    @data = response.values
+    @array = []
+ 
+    j = 1
+    while j <  @data.length do
+      h = Hash.new()
+      k= 0
+      for i in @data[0] 
+        h[i] = @data[j][k] 
+        k += 1
+      end
+      j += 1  
+      @array << h
+    end  
+      
+
+
 
   end
+
+
   private
 
   def set_spreadsheet
