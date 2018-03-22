@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322014615) do
+ActiveRecord::Schema.define(version: 20180322035021) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -29,11 +29,10 @@ ActiveRecord::Schema.define(version: 20180322014615) do
 
   create_table "spreadsheets", force: :cascade do |t|
     t.string "spreadsheet_name"
-    t.string "range_a"
+    t.string "range_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "tab_name"
-    t.string "range_b"
     t.string "tab_id"
   end
 
