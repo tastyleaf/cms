@@ -1,7 +1,7 @@
 <div class="some-tab">
   <h1>TAB</h1>
     <div class="tab">
-      <iframe  src="https://docs.google.com/spreadsheets/d/1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o/edit?usp=drive_web&ouid=109915620930048457783"></iframe>
+      <iframe src=<%="https://docs.google.com/spreadsheets/d/#{@spreadsheet.spreadsheet_name}/edit#gid=#{@spreadsheet.tab_id}" %></iframe>
     </div>
 </div>
 <div class="type-range">
@@ -16,10 +16,3 @@
   <% end %>
 </div>
  
-<%= form_for @spreadsheet do |f| %>
-  <div class="form-group">
-    <%= f.text_field :range_a %>
-    <%= f.text_field :range_b %>
-  </div>
-  <%= f.submit 'NEXT' %>
-<% end %>
