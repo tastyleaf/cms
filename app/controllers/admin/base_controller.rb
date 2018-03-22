@@ -1,6 +1,5 @@
 class Admin::BaseController < ApplicationController
-  # before_action :authenticate_admin
-  # add this after finish the admin's platform
+  before_action :authenticate_admin
 
 
   private
