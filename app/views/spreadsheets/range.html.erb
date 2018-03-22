@@ -1,5 +1,5 @@
 <div class="some-tab">
-  <h1>TAB</h1>
+  <h1>Specify The Range</h1>
     <div class="tab">
       <iframe src=<%="https://docs.google.com/spreadsheets/d/#{@spreadsheet.spreadsheet_name}/edit#gid=#{@spreadsheet.tab_id}" %>></iframe>
     </div>
@@ -15,4 +15,6 @@
     <ul class="after-rendering"><li><%= @spreadsheet.errors.full_messages.to_sentence%></li></ul>
   <% end %>
 </div>
- 
+ <div class="back">
+  <%= link_to 'back', url_for(:back), class: "btn-back" %>
+</div>

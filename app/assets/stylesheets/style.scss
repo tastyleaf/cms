@@ -273,7 +273,7 @@ div.alert{
 .type-range{
   width: 100vw;
   position: absolute;
-  bottom: 5%;
+  bottom: 8%;
   text-align: center;
 }
 
@@ -303,4 +303,16 @@ div.alert{
   border-radius: 0 30px 30px 0;
   border: 2px solid #000;
   display: inline-block;
+}
+
+.btn-back{
+  border: 2px solid #000;
+  font-size: 20px;
+  padding: 5px 30px;
+  border-radius: 30px;
+}
+
+.back{
+  text-align: center;
+  margin-top: 30px;
 }
