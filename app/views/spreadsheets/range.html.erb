@@ -16,3 +16,10 @@
   <% end %>
 </div>
  
+<%= form_for @spreadsheet do |f| %>
+  <div class="form-group">
+    <%= f.text_field :range_a %>
+    <%= f.text_field :range_b %>
+  </div>
+  <%= f.submit 'NEXT' %>
+<% end %>

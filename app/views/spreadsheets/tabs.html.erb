@@ -10,3 +10,13 @@
   <% end %>
 </div>
  
+<%= @spreadsheet.spreadsheet_name %>
+
+<div>--------</div>
+<% @tabs.each do |tab| %>
+  <div>
+    <%= link_to "#{tab.properties.title}", spreadsheet_path(@spreadsheet), method: :put %>
+    <iframe  src="#"></iframe>
+  </div>
+<% end %>
+ 
