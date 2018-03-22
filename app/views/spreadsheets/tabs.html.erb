@@ -1,11 +1,12 @@
- 
-<%= @spreadsheet.spreadsheet_name %>
-
-<div>--------</div>
-<% @tabs.each do |tab| %>
-  <div>
-    <%= link_to "#{tab.properties.title}"%>
-    <iframe  src="#"></iframe>
-  </div>
-<% end %>
+<div class="all-tabs">
+  <h1>TABS</h1>
+  <% @tabs.each do |tab| %>
+  <button type="submit" form="form1" value="Submit" class="choice">
+    <p><%= tab.properties.title %></p>
+      <div class="tab">
+        <iframe  src="https://docs.google.com/spreadsheets/d/1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o/edit?usp=drive_web&ouid=109915620930048457783"></iframe>
+      </div>
+    </button>
+  <% end %>
+</div>
  
