@@ -1,8 +1,9 @@
 class SpreadsheetsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @spreadsheet = Spreadsheet.new
   end
-
 
   def create
     @spreadsheet = Spreadsheet.new(spreadsheet_params)
@@ -32,7 +33,7 @@ class SpreadsheetsController < ApplicationController
   end
 
   def range
-
+    set_spreadsheet
   end
 
   def js

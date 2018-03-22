@@ -1,0 +1,18 @@
+<div class="some-tab">
+  <h1>TAB</h1>
+    <div class="tab">
+      <iframe  src="https://docs.google.com/spreadsheets/d/1m4xuNtoujwTySp3sXS2iZ0gsSk8m9d86S_NtReXHi7o/edit?usp=drive_web&ouid=109915620930048457783"></iframe>
+    </div>
+</div>
+<div class="type-range">
+  <%= form_for @spreadsheet do |f| %>
+    <div class="form-group">
+      <%= f.text_field :range_name, autofocus: true, placeholder: "Ex: A1:D5" %>
+    </div>
+    <%= f.submit 'NEXT' %>
+  <% end %>
+  <% if @spreadsheet.errors.present? %>
+    <ul class="after-rendering"><li><%= @spreadsheet.errors.full_messages.to_sentence%></li></ul>
+  <% end %>
+</div>
+ 
