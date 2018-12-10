@@ -27,11 +27,12 @@ ul, ol {
 .hero-copy-inner-wrapper {
   margin-top: 72px;
   position: relative;
+  text-align: center;
 }
 
 .next-line {
   position: absolute;
-  top: 200px;
+  top: 20%;
   left: 120px;
   width: 530px;
 }
@@ -42,7 +43,7 @@ ul, ol {
 
 .hero-copy-inner-wrapper a {
   position: absolute;
-  bottom: 270px;
+  top: 60%;
   left: 120px;
   color: white;
   background-color: #323237;
